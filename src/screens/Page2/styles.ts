@@ -6,26 +6,29 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-    flex: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
+    cardImage: {
+        width: 260,
+        height: 350,
     },
 
     //texto
-    text: {
-        color: colors.white,
-        fontSize: 35,
-    },
     texto: {
+        fontSize: 40,
         color: colors.black,
-        fontSize: 25,
+        textAlign: 'center',
     },
 
     //elementos
-    menu: {
-        flexDirection: 'row',
-        marginBottom: 25,
-        justifyContent: 'space-around',
+    card: {
+        width: 300,
+        height: 700,
+        backgroundColor: colors.secondaryLight,
+        borderRadius: 20,
     },
+
+    //imagem
+    image: {
+        width: 260,
+        height: 240,
+    }
 });

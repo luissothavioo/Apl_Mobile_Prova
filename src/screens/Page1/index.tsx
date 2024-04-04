@@ -1,24 +1,56 @@
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, ImageBackground } from 'react-native';
 import { ButtonSlide } from '../../components/ButtonSlide'
-import { styleContainer } from "../../styles/GlobalStyles"
+import { styleContainer, styleText, styleElements } from "../../styles/GlobalStyles"
 import { styles } from "./styles"
 import { IPagina } from "../../../App";
 
 export function Page1({ setPageI }: IPagina) {
-    const vaso = require('../../assets/vasinho.png')
+    const slide = require('../../assets/fundo.png')
+    const logo = require('../../assets/logo.png')
+    const maior = ">"
     return (
-        <View style={styleContainer.container}>
+        <ImageBackground source={slide} style={styleContainer.container}>
             <View style={styles.container}>
-                <View style={styles.flex}>
-                    <Text style={styles.text}>PROVA APLICAÇÕES MOVEIS</Text>
-                    <Image source={vaso} style={styles.imagem} />
-                    <Text style={styles.texto}>está é a página 1</Text>
+                <View style={styleContainer.menu}>
+                    <View>
+                        <Image source={logo} />
+                    </View>
+                    <View style={styleElements.titleDiv}>
+                        <Text style={styleText.textTitle}>Flores</Text>
+                    </View>
+                    <View>
+                        <ButtonSlide onPressI={() => setPageI(2)} signal={">"}></ButtonSlide>
+                    </View>
                 </View>
-                <View style={styles.menu}>
-                    <ButtonSlide onPressI={() => setPageI(1)} cor={true} />
-                    <ButtonSlide onPressI={() => setPageI(2)} cor={false} />
+
+                <View style={styleContainer.main}>
+                    <View style={styles.card}>
+                        <View style={styleElements.campo}>
+                            <View style={styles.textDiv}>
+                                <Text style={styles.bold}>•</Text><Text style={styles.texto}><Text style={styles.bold}> Rosa:</Text> pode representar gratidão, amizade, pureza e admiração.</Text>
+                            </View>
+                            <View style={styles.textDiv}>
+                                <Text style={styles.bold}>•</Text><Text style={styles.texto}><Text style={styles.bold}> Lírio:</Text> pode representar renovação, esperança e fé.</Text>
+                            </View>
+                            <View style={styles.textDiv}>
+                                <Text style={styles.bold}>•</Text><Text style={styles.texto}><Text style={styles.bold}> Girassol:</Text> pode representar lealdade, longevidade e adoração.</Text>
+                            </View>
+                            <View style={styles.textDiv}>
+                                <Text style={styles.bold}>•</Text><Text style={styles.texto}><Text style={styles.bold}> Orquídea:</Text> pode representar amor, beleza, fertilidade e luxúria.</Text>
+                            </View>
+                            <View style={styles.textDiv}>
+                                <Text style={styles.bold}>•</Text><Text style={styles.texto}><Text style={styles.bold}> Margarida:</Text> pode representar amor verdadeiro, alegria e felicidade.</Text>
+                            </View>
+                            <View style={styles.textDiv}>
+                                <Text style={styles.bold}>•</Text><Text style={styles.texto}><Text style={styles.bold}> Crisântemo:</Text> pode representar felicidade, longevidade e honra em outras culturas.</Text>
+                            </View>
+                            <View style={styles.textDiv}>
+                                <Text style={styles.bold}>•</Text><Text style={styles.texto}><Text style={styles.bold}> Tulipa:</Text> pode representar amor perfeito, paixão e beleza.</Text>
+                            </View>
+                        </View>
+                    </View>
                 </View>
             </View>
-        </View>
+        </ImageBackground>
     )
 }

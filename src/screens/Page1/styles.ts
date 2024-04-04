@@ -6,32 +6,26 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-    flex: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
 
     //texto
-    text: {
-        color: colors.white,
-        fontSize: 35,
-    },
     texto: {
+        fontSize: 27,
         color: colors.black,
+    },
+    bold: {
+        fontWeight: 'bold',
         fontSize: 25,
+        color: colors.black,
     },
 
     //elementos
-    menu: {
+    textDiv: {
         flexDirection: 'row',
-        marginBottom: 25,
-        justifyContent: 'space-around',
     },
-
-    //imagem
-    imagem: {
-        width: 88,
-        height: 126,
+    card: {
+        width: 300,
+        height: 700,
+        backgroundColor: colors.primaryLight,
+        borderRadius: 20,
     },
 });
